@@ -51,7 +51,7 @@
             </thead>
             <?php
 
-            $all_data = get_attendence_today();
+            $all_data = get_late_today();
             print_r($all_data);
             ?>
             <tbody>
