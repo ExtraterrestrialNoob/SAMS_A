@@ -11,7 +11,8 @@
 
         <!-- Includes -->
         <?php 
-            require 'Controllers/Fetch_data.php'
+            require 'Controllers/Fetch_data.php';
+            include 'Controllers/Add_data.php';
         ?>
 
         <div class="nav-bar">
@@ -31,8 +32,8 @@
                     <input type="text" placeholder="QR" id="qr" name="qr">
 
                     <div class="radio_section">
-                        <input type="radio" id="in" name="in_or_out"> IN
-                        <input type="radio" id="out" name="in_or_out"> OUT
+                        <input type="radio" id="in" name="in_out_status"> IN
+                        <input type="radio" id="out" name="in_out_status"> OUT
                     </div>
                     <input type="submit" value="SUBMIT" id="submitbtn">
                 </form>
@@ -52,13 +53,13 @@
             <?php
 
             $all_data = get_attendence_today();
-            print_r($all_data);
+            // print_r($all_data);
             ?>
             <tbody>
                 <?php foreach ($all_data as $row) { ?>
                     <tr align="center">
                         <td><?= htmlentities($row['At_id']); ?></td>
-                        <td><?= htmlentities($row['stu_id']); ?></td>
+                        <td><?= htmlentities($row['id']); ?></td>
                         <td><?= htmlentities($row['record_time']); ?></td>
                         <td><?= htmlentities($row['out_or_in']); ?></td>
                         <td><?= htmlentities(date("M d, Y",strtotime($row['record_date']))); ?></td>
