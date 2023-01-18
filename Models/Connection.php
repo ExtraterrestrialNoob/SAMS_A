@@ -4,6 +4,7 @@
 // $password = "ZtZOMClbZhS7cpZ";
 // $databaseName = "epiz_33398696_sameera";
 
+
 $hostName = "localhost";
 $userName = "root";
 $password = "";
