@@ -11,3 +11,5 @@ if (!isset($_SESSION['user'])) //if user session is not set
     //redirect login page
     header("location:" . SITEURL . "clc.php");
 }
+
+

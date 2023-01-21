@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!(isset($_SESSION['user']) && $_SESSION['user'] != '')) {
+if (!(isset($_SESSION['jjk']) && $_SESSION['jjk'] != '')) {
 
 header ("Location: ../index.php");
 
@@ -58,7 +58,7 @@ header ("Location: ../index.php");
     <div class="align-items-end"" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-            <a class="nav-link" href="../logout.php" style="color: #fff"><b><i class="fa fa-user"></i> Logout </b></a>
+            <a class="nav-link" href="logout.php" style="color: #fff"><b><i class="fa fa-user"></i> Logout </b></a>
             </li>
 
         </ul>
@@ -112,7 +112,6 @@ header ("Location: ../index.php");
                     <br>
                     <div class="btn_submit">
                         <input class="btn btn-primary" type="submit" value="Submit">
-                        <!-- <input type="submit" value="submit" class="btn"> -->
                     </div>
                 </form>
                 <hr>
@@ -151,8 +150,9 @@ header ("Location: ../index.php");
       </div>
     </div>
 
+
     <script>
-        let scanner = new Instascan.Scanner({
+        let scanner  = new Instascan.Scanner ({
             video: document.getElementById('preview')
         });
         Instascan.Camera.getCameras().then(function(cameras) {

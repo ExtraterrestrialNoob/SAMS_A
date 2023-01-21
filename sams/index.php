@@ -80,6 +80,7 @@ Login System
 					//user found and login success
 					$_SESSION['login'] = " <div class='success'>Login Successfull</div>";
 					$_SESSION['user'] = $username; //to check whether the user logged in or not and logout will unset it
+					$_SESSION['jjk'] = $username; 
 					$_SESSION['login_time'] = time();
 			
 					//redirect home page dashbord
@@ -119,7 +120,9 @@ Login System
 			
 					//user found and login success
 					$_SESSION['login'] = " <div class='success'>Login Successfull</div>";
-					$_SESSION['user'] = $username; //to check whether the user logged in or not and logout will unset it
+					// $_SESSION['user'] = $username; 
+					$_SESSION['jjk'] = $username; //to check whether the user logged in or not and logout will unset it
+					
 					$_SESSION['login_time'] = time();
 			
 					//redirect home page dashbord

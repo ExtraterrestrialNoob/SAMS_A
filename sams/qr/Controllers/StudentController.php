@@ -27,7 +27,6 @@ if(isset($_POST['sindex'])){
    
     if ( $get_id->execute() === TRUE) {
         $data = $get_id->get_result();
-
         $id = $data->fetch_assoc();
         if($id == null){
             echo "<div class='alert alert-danger' role='alert' style='font-size:22px'><h4>  user not fount</b> </h4></div>";
@@ -35,28 +34,13 @@ if(isset($_POST['sindex'])){
             return;
     
         }
-        $id = $data->fetch_assoc()['id'];
-
-        // if($id = $data->fetch_assoc()['id'] ){
-          
-        //     if($id == null){
-        //         echo "<div class='alert alert-warning' role='alert' style='font-size:22px'><h4>  Not Registered : </b> ".$sindex." </h4></div>";
-        //     return;
-
-        //     }
-            
-    
-        // }
         
-       
-        // print_r($id);
-        // // print_r($data);
-        // print_r($get_id);
-        
-    
     }
-
-    // $id = $data->fetch_assoc()['id'] 
+    if ( $get_id->execute() === TRUE) {
+        $data = $get_id->get_result();
+        $id = $data->fetch_assoc()['id'];
+       
+    } 
 
     
     
